@@ -113,23 +113,37 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yT7-86-oiF">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
                                         <state key="normal" title="Swimming"/>
+                                        <connections>
+                                            <action selector="didTappedFirstButton:" destination="Qak-kZ-0fe" eventType="touchUpInside" id="6q1-Yo-6ca"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ie-93-MHB">
                                         <rect key="frame" x="0.0" y="30" width="382" height="30"/>
                                         <state key="normal" title="Sleeping"/>
+                                        <connections>
+                                            <action selector="didTappedSecondButton:" destination="Qak-kZ-0fe" eventType="touchUpInside" id="acG-bq-Spk"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjf-37-okN">
                                         <rect key="frame" x="0.0" y="60" width="382" height="30"/>
                                         <state key="normal" title="Cudding"/>
+                                        <connections>
+                                            <action selector="didTappedThirdButton:" destination="Qak-kZ-0fe" eventType="touchUpInside" id="Et3-aP-5jE"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4E-8k-PqC">
                                         <rect key="frame" x="0.0" y="90" width="382" height="30"/>
                                         <state key="normal" title="Eating"/>
+                                        <connections>
+                                            <action selector="didTappedFourthButton:" destination="Qak-kZ-0fe" eventType="touchUpInside" id="rKt-o6-FnL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="OFR-CD-ePQ">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="OFR-CD-ePQ">
                                 <rect key="frame" x="0.0" y="88" width="414" height="4"/>
+                                <color key="progressTintColor" systemColor="systemGreenColor"/>
+                                <color key="trackTintColor" systemColor="systemOrangeColor"/>
                             </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="u7l-uQ-t9J"/>
@@ -148,11 +162,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="z06-yD-6nE"/>
                     <connections>
-                        <outlet property="QuestionLabel" destination="lYt-Y2-5KO" id="R2C-c3-9Iz"/>
                         <outlet property="answerFourButton" destination="P4E-8k-PqC" id="vpX-s3-Pca"/>
                         <outlet property="answerOneButton" destination="yT7-86-oiF" id="YqQ-K9-xbF"/>
                         <outlet property="answerThreeButton" destination="mjf-37-okN" id="zGs-2o-epn"/>
                         <outlet property="answerTwoButton" destination="7Ie-93-MHB" id="Q2Y-dX-Iuj"/>
+                        <outlet property="questionLabel" destination="lYt-Y2-5KO" id="R2C-c3-9Iz"/>
                         <outlet property="questionProgressView" destination="OFR-CD-ePQ" id="wZ3-Yn-xYY"/>
                     </connections>
                 </viewController>
@@ -164,6 +178,12 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

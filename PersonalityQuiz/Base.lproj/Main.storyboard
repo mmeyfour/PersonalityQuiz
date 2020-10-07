@@ -93,10 +93,10 @@
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="80.357142857142847"/>
         </scene>
-        <!--View Controller-->
+        <!--Question View Controller-->
         <scene sceneID="DPC-b7-Cqn">
             <objects>
-                <viewController id="Qak-kZ-0fe" sceneMemberID="viewController">
+                <viewController id="Qak-kZ-0fe" customClass="QuestionViewController" customModule="PersonalityQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Ds-Jn-59Q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -147,6 +147,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="z06-yD-6nE"/>
+                    <connections>
+                        <outlet property="QuestionLabel" destination="lYt-Y2-5KO" id="R2C-c3-9Iz"/>
+                        <outlet property="answerFourButton" destination="P4E-8k-PqC" id="vpX-s3-Pca"/>
+                        <outlet property="answerOneButton" destination="yT7-86-oiF" id="YqQ-K9-xbF"/>
+                        <outlet property="answerThreeButton" destination="mjf-37-okN" id="zGs-2o-epn"/>
+                        <outlet property="answerTwoButton" destination="7Ie-93-MHB" id="Q2Y-dX-Iuj"/>
+                        <outlet property="questionProgressView" destination="OFR-CD-ePQ" id="wZ3-Yn-xYY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UJG-uD-SpC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

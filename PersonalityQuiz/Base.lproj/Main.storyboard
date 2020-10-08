@@ -115,6 +115,7 @@
                                         <state key="normal" title="Swimming"/>
                                         <connections>
                                             <action selector="didTappedFirstButton:" destination="Qak-kZ-0fe" eventType="touchUpInside" id="6q1-Yo-6ca"/>
+                                            <segue destination="Nur-gp-GLh" kind="show" id="rPW-DJ-XYA"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ie-93-MHB">
@@ -122,6 +123,7 @@
                                         <state key="normal" title="Sleeping"/>
                                         <connections>
                                             <action selector="didTappedSecondButton:" destination="Qak-kZ-0fe" eventType="touchUpInside" id="acG-bq-Spk"/>
+                                            <segue destination="Nur-gp-GLh" kind="show" id="zno-V4-fDc"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjf-37-okN">
@@ -129,6 +131,7 @@
                                         <state key="normal" title="Cudding"/>
                                         <connections>
                                             <action selector="didTappedThirdButton:" destination="Qak-kZ-0fe" eventType="touchUpInside" id="Et3-aP-5jE"/>
+                                            <segue destination="Nur-gp-GLh" kind="show" id="8mI-Lt-oGU"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4E-8k-PqC">
@@ -136,6 +139,7 @@
                                         <state key="normal" title="Eating"/>
                                         <connections>
                                             <action selector="didTappedFourthButton:" destination="Qak-kZ-0fe" eventType="touchUpInside" id="rKt-o6-FnL"/>
+                                            <segue destination="Nur-gp-GLh" kind="show" id="Dlc-ab-qZp"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -174,7 +178,46 @@
             </objects>
             <point key="canvasLocation" x="963.76811594202911" y="79.6875"/>
         </scene>
+        <!--Results View Controller-->
+        <scene sceneID="v94-K0-oZR">
+            <objects>
+                <viewController id="Nur-gp-GLh" customClass="ResultsViewController" customModule="PersonalityQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hfe-Fv-XHQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are a Dog 🐶!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kK9-IF-y6g">
+                                <rect key="frame" x="87.5" y="458" width="239" height="34.5"/>
+                                <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You like friends and loyal !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9T-m4-ciZ">
+                                <rect key="frame" x="87" y="508.5" width="240" height="23"/>
+                                <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PWr-FT-uGj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kK9-IF-y6g" firstAttribute="centerY" secondItem="PWr-FT-uGj" secondAttribute="centerY" id="7Jz-xM-Zgt"/>
+                            <constraint firstItem="kK9-IF-y6g" firstAttribute="centerX" secondItem="PWr-FT-uGj" secondAttribute="centerX" id="MRm-5X-Ml7"/>
+                            <constraint firstItem="p9T-m4-ciZ" firstAttribute="top" secondItem="kK9-IF-y6g" secondAttribute="bottom" constant="16" id="VYM-nG-ALw"/>
+                            <constraint firstItem="p9T-m4-ciZ" firstAttribute="centerX" secondItem="PWr-FT-uGj" secondAttribute="centerX" id="WUa-6i-Nsl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="oEc-Xn-8a8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gY4-kH-3MU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1852" y="80"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Dlc-ab-qZp"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

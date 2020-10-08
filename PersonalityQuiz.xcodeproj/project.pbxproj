@@ -16,6 +16,7 @@
 		50C98568252E00D600D33756 /* QuizResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C98567252E00D600D33756 /* QuizResults.swift */; };
 		50C9856D252E0DE400D33756 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C9856C252E0DE400D33756 /* IntroductionViewController.swift */; };
 		50C98570252E13BD00D33756 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C9856F252E13BD00D33756 /* QuestionViewController.swift */; };
+		50C98573252F031800D33756 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C98572252F031800D33756 /* ResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		50C98567252E00D600D33756 /* QuizResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResults.swift; sourceTree = "<group>"; };
 		50C9856C252E0DE400D33756 /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
 		50C9856F252E13BD00D33756 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		50C98572252F031800D33756 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			children = (
 				50C9856C252E0DE400D33756 /* IntroductionViewController.swift */,
 				50C9856F252E13BD00D33756 /* QuestionViewController.swift */,
+				50C98572252F031800D33756 /* ResultsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				50C98568252E00D600D33756 /* QuizResults.swift in Sources */,
 				50C9856D252E0DE400D33756 /* IntroductionViewController.swift in Sources */,
 				50C98570252E13BD00D33756 /* QuestionViewController.swift in Sources */,
+				50C98573252F031800D33756 /* ResultsViewController.swift in Sources */,
 				50C9854F252DFE8000D33756 /* AppDelegate.swift in Sources */,
 				50C98551252DFE8000D33756 /* SceneDelegate.swift in Sources */,
 				50C98565252DFF2800D33756 /* QuestionData.swift in Sources */,

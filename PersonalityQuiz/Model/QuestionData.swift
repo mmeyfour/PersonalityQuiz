@@ -26,14 +26,14 @@ enum Animal: String {
 extension Animal {
     var subtitle : String {
         switch self {
-            case .dog:
-                return "piratilla"
-            case .cat:
-                return "piratilla"
-            case .turtle:
-                return "piratilla"
-            case .rabbit:
-                return "piratilla"
+        case .dog:
+            return "You are incredibly outgoing. You surround yourself with the people you love, and enjoy activities with your friends."
+        case .cat:
+            return "Mischievous, yet mild-tempered, you enjoy doing things on your own terms."
+        case .rabbit:
+            return "You love everything that's soft. You are healthy and full of energy."
+        case .turtle:
+            return "You are wise beyond your years, and you focus on the details. Slow and steady wins the race."
         }
     }
     
@@ -43,7 +43,16 @@ struct State {
     private var currentQuestionIndex = 0
     let questions = [
         Question(
-            text: "What is your favorite food ?",
+            text: "Which activities do you enjoy?",
+            answers: [
+                Answer(text: "Swimming", type: .turtle),
+                Answer(text: "Sleeping", type: .cat),
+                Answer(text: "Cuddling", type: .rabbit),
+                Answer(text: "Eating", type: .dog)
+            ]
+        ),
+        Question(
+            text: "What is your favorite food?",
             answers: [
                 Answer(text: "Steak", type: .dog),
                 Answer(text: "Fish", type: .cat),
@@ -52,21 +61,21 @@ struct State {
             ]
         ),
         Question(
-            text: "Which Activities Do You enjoy ?",
-            answers: [
-                Answer(text: "Swimming", type: .turtle),
-                Answer(text: "sleeping", type: .cat),
-                Answer(text: "Cudding", type: .rabbit),
-                Answer(text: "Eating", type: .dog)
-            ]
-        ),
-        Question(
-            text: "How Much Do You enjoy car rides?",
+            text: "How much do you enjoy car rides?",
             answers: [
                 Answer(text: "I dislike them", type: .cat),
                 Answer(text: "I get a little nervous", type: .rabbit),
-                Answer(text: "Ibearly notice them", type: .turtle),
-                Answer(text: "I love Them", type: .dog)
+                Answer(text: "I barely notice them", type: .turtle),
+                Answer(text: "I love them", type: .dog)
+            ]
+        ),
+        Question(
+            text: "What do you like to hunt?",
+            answers: [
+                Answer(text: "Geckos", type: .cat),
+                Answer(text: "Butterflies", type: .rabbit),
+                Answer(text: "Flies", type: .turtle),
+                Answer(text: "Bones", type: .dog)
             ]
         )
     ]
@@ -80,18 +89,25 @@ extension State {
         }
         return questions[currentQuestionIndex]
     }
+    
     mutating func incrementQuestion() {
         currentQuestionIndex += 1
     }
+    
     var hasNextQuestion: Bool {
         return currentQuestionIndex < questions.count
     }
+    
     mutating func chooseAnswer(at index: Int){
-        chosenAnswers.append(questions[currentQuestionIndex].answers[index])
+        let answer = questions[currentQuestionIndex].answers[index]
+        print("User chose answer for \(answer.type.rawValue)")
+        chosenAnswers.append(answer)
     }
+    
     mutating func add(answer: Answer){
         chosenAnswers.append(answer)
     }
+    
     var winningAnimal: Animal? {
         var quizCount: [Animal: Int] = [:]
         
@@ -124,7 +140,7 @@ extension State {
         chosenAnswers = []
     }
     
-    mutating func progress() -> Float {
+    var currentProgress: Float {
         return Float(currentQuestionIndex) / Float(questions.count)
     }
     

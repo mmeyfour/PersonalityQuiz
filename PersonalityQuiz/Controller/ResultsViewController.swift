@@ -14,24 +14,25 @@ class ResultsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         navigationItem.hidesBackButton = true
         updateUI()
     }
+    
     var state: State?
     
     func updateUI() {
         guard let state = state else {
             return
         }
+        
         guard let winningAnimal = state.winningAnimal else {
             return
         } 
         //let winningAnimal = state.winningAnimal
-        let wininningAnimal = Animal.dog
-
-        let winningAnimal = state.winningAnimal
-        titleLabel.text = ""
-        subtitleLabel.text = ""
+        
+        titleLabel.text = "you are a \(winningAnimal.rawValue)"
+        subtitleLabel.text = winningAnimal.subtitle
         
         
     }

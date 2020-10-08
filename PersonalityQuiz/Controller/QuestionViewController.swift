@@ -25,7 +25,7 @@ class QuestionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //navigationItem.backBarButtonItem = true
+        navigationItem.hidesBackButton = true
         question = state?.nextQuestion
         updateUI()
         
@@ -53,14 +53,10 @@ class QuestionViewController: UIViewController {
         questionProgressView.progress = state?.currentProgress ?? 0.0
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //        if let nextQuestion = state?.nextQuestion
-        //        //        guard let nextQuestion = state.nextQuestion else {
-        //        //            return
-        //        //        }
-        //        guard let questionViewController = segue.destination as? QuestionViewController else {
-        //            return
-        //        }
-        //        questionViewController.question = nextQuestion
+        guard let resultsViewController = segue.destination as? ResultsViewController else {
+            return
+        }
+        resultsViewController.state = state
         
     }
     func navigateToNextScreen() {

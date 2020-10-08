@@ -96,7 +96,7 @@
         <!--Question View Controller-->
         <scene sceneID="DPC-b7-Cqn">
             <objects>
-                <viewController id="Qak-kZ-0fe" customClass="QuestionViewController" customModule="PersonalityQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuestionViewController" id="Qak-kZ-0fe" customClass="QuestionViewController" customModule="PersonalityQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Ds-Jn-59Q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,32 +114,32 @@
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
                                         <state key="normal" title="Swimming"/>
                                         <connections>
+                                            <action selector="didTapFirestAnswer:" destination="Qak-kZ-0fe" eventType="touchUpInside" id="wIl-vE-NaS"/>
                                             <action selector="didTappedFirstButton:" destination="Qak-kZ-0fe" eventType="touchUpInside" id="6q1-Yo-6ca"/>
-                                            <segue destination="Nur-gp-GLh" kind="show" id="rPW-DJ-XYA"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ie-93-MHB">
                                         <rect key="frame" x="0.0" y="30" width="382" height="30"/>
                                         <state key="normal" title="Sleeping"/>
                                         <connections>
+                                            <action selector="didTapSecondAnswer:" destination="Qak-kZ-0fe" eventType="touchUpInside" id="1Q2-VQ-jfq"/>
                                             <action selector="didTappedSecondButton:" destination="Qak-kZ-0fe" eventType="touchUpInside" id="acG-bq-Spk"/>
-                                            <segue destination="Nur-gp-GLh" kind="show" id="zno-V4-fDc"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjf-37-okN">
                                         <rect key="frame" x="0.0" y="60" width="382" height="30"/>
                                         <state key="normal" title="Cudding"/>
                                         <connections>
+                                            <action selector="didTapThirdAnswer:" destination="Qak-kZ-0fe" eventType="touchUpInside" id="eay-Tc-azk"/>
                                             <action selector="didTappedThirdButton:" destination="Qak-kZ-0fe" eventType="touchUpInside" id="Et3-aP-5jE"/>
-                                            <segue destination="Nur-gp-GLh" kind="show" id="8mI-Lt-oGU"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4E-8k-PqC">
                                         <rect key="frame" x="0.0" y="90" width="382" height="30"/>
                                         <state key="normal" title="Eating"/>
                                         <connections>
+                                            <action selector="didTapFourthAnswer:" destination="Qak-kZ-0fe" eventType="touchUpInside" id="JYA-rh-2EP"/>
                                             <action selector="didTappedFourthButton:" destination="Qak-kZ-0fe" eventType="touchUpInside" id="rKt-o6-FnL"/>
-                                            <segue destination="Nur-gp-GLh" kind="show" id="Dlc-ab-qZp"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -172,6 +172,7 @@
                         <outlet property="answerTwoButton" destination="7Ie-93-MHB" id="Q2Y-dX-Iuj"/>
                         <outlet property="questionLabel" destination="lYt-Y2-5KO" id="R2C-c3-9Iz"/>
                         <outlet property="questionProgressView" destination="OFR-CD-ePQ" id="wZ3-Yn-xYY"/>
+                        <segue destination="Nur-gp-GLh" kind="show" identifier="PresentQuizResults" id="EEd-21-lzg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UJG-uD-SpC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -223,9 +224,6 @@
             <point key="canvasLocation" x="1852" y="80"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Dlc-ab-qZp"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

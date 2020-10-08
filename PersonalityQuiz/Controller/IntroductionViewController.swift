@@ -9,10 +9,15 @@ import UIKit
 
 class IntroductionViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    let state = State()
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // la primera pantalla configura la siguiente pantalla y la ultima da el salto a otra pagina
 
-        // Do any additional setup after loading the view.
+        guard let questionViewController = segue.destination as? QuestionViewController else {
+            return
+        }
+        questionViewController.state = state
     }
 
 }

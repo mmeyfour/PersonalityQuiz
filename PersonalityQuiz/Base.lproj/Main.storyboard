@@ -144,7 +144,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="OFR-CD-ePQ">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OFR-CD-ePQ">
                                 <rect key="frame" x="0.0" y="88" width="414" height="4"/>
                                 <color key="progressTintColor" systemColor="systemGreenColor"/>
                                 <color key="trackTintColor" systemColor="systemOrangeColor"/>
@@ -178,7 +178,7 @@
             </objects>
             <point key="canvasLocation" x="963.76811594202911" y="79.6875"/>
         </scene>
-        <!--Results View Controller-->
+        <!--Quiz results-->
         <scene sceneID="v94-K0-oZR">
             <objects>
                 <viewController id="Nur-gp-GLh" customClass="ResultsViewController" customModule="PersonalityQuiz" customModuleProvider="target" sceneMemberID="viewController">
@@ -198,17 +198,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="a8y-uX-DtO">
+                                <rect key="frame" x="0.0" y="88" width="414" height="4"/>
+                                <color key="progressTintColor" systemColor="systemGreenColor"/>
+                                <color key="trackTintColor" systemColor="systemOrangeColor"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PWr-FT-uGj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="kK9-IF-y6g" firstAttribute="centerY" secondItem="PWr-FT-uGj" secondAttribute="centerY" id="7Jz-xM-Zgt"/>
                             <constraint firstItem="kK9-IF-y6g" firstAttribute="centerX" secondItem="PWr-FT-uGj" secondAttribute="centerX" id="MRm-5X-Ml7"/>
+                            <constraint firstItem="a8y-uX-DtO" firstAttribute="top" secondItem="PWr-FT-uGj" secondAttribute="top" id="ObM-S4-p8R"/>
                             <constraint firstItem="p9T-m4-ciZ" firstAttribute="top" secondItem="kK9-IF-y6g" secondAttribute="bottom" constant="16" id="VYM-nG-ALw"/>
                             <constraint firstItem="p9T-m4-ciZ" firstAttribute="centerX" secondItem="PWr-FT-uGj" secondAttribute="centerX" id="WUa-6i-Nsl"/>
+                            <constraint firstItem="a8y-uX-DtO" firstAttribute="leading" secondItem="PWr-FT-uGj" secondAttribute="leading" id="iZ4-h7-y5Y"/>
+                            <constraint firstItem="PWr-FT-uGj" firstAttribute="trailing" secondItem="a8y-uX-DtO" secondAttribute="trailing" id="qDO-nt-ECh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="oEc-Xn-8a8"/>
+                    <navigationItem key="navigationItem" title="Quiz results" id="oEc-Xn-8a8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gY4-kH-3MU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

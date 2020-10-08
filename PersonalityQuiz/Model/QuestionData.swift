@@ -36,11 +36,11 @@ extension Animal {
             return "You are wise beyond your years, and you focus on the details. Slow and steady wins the race."
         }
     }
-    
 }
 
 struct State {
     private var currentQuestionIndex = 0
+    
     let questions = [
         Question(
             text: "Which activities do you enjoy?",
@@ -79,11 +79,12 @@ struct State {
             ]
         )
     ]
+    
     private var chosenAnswers: [Answer] = []
 }
 
 extension State {
-    var nextQuestion: Question?{
+    var currentQuestion: Question?{
         guard currentQuestionIndex < questions.count else {
             return nil
         }

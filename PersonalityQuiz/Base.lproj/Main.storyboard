@@ -114,36 +114,34 @@
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
                                         <state key="normal" title="Swimming"/>
                                         <connections>
-                                            <action selector="didTapFirestAnswer:" destination="Qak-kZ-0fe" eventType="touchUpInside" id="lsI-Qb-hS3"/>
+                                            <action selector="didTapFirestAnswer:" destination="Qak-kZ-0fe" eventType="touchUpInside" id="ax5-of-CEC"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ie-93-MHB">
                                         <rect key="frame" x="0.0" y="30" width="382" height="30"/>
                                         <state key="normal" title="Sleeping"/>
                                         <connections>
-                                            <action selector="didTapSecondAnswer:" destination="Qak-kZ-0fe" eventType="touchUpInside" id="aBS-k2-hBk"/>
+                                            <action selector="didTapSecondAnswer:" destination="Qak-kZ-0fe" eventType="touchUpInside" id="Enu-r5-36i"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjf-37-okN">
                                         <rect key="frame" x="0.0" y="60" width="382" height="30"/>
                                         <state key="normal" title="Cudding"/>
                                         <connections>
-                                            <action selector="didTapThirdAnswer:" destination="Qak-kZ-0fe" eventType="touchUpInside" id="xfJ-b9-fcS"/>
+                                            <action selector="didTapThirdAnswer:" destination="Qak-kZ-0fe" eventType="touchUpInside" id="z2l-Jo-NOm"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4E-8k-PqC">
                                         <rect key="frame" x="0.0" y="90" width="382" height="30"/>
                                         <state key="normal" title="Eating"/>
                                         <connections>
-                                            <action selector="didTapFourthAnswer:" destination="Qak-kZ-0fe" eventType="touchUpInside" id="3CN-hJ-vHy"/>
+                                            <action selector="didTapFourthAnswer:" destination="Qak-kZ-0fe" eventType="touchUpInside" id="zjt-4i-4DW"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OFR-CD-ePQ">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="OFR-CD-ePQ">
                                 <rect key="frame" x="0.0" y="88" width="414" height="4"/>
-                                <color key="progressTintColor" systemColor="systemGreenColor"/>
-                                <color key="trackTintColor" systemColor="systemOrangeColor"/>
                             </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="u7l-uQ-t9J"/>

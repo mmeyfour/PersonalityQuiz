@@ -26,7 +26,7 @@ class QuestionViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.hidesBackButton = true
-        question = state?.nextQuestion
+        question = state?.currentQuestion
         updateUI()
         
     }
@@ -44,12 +44,28 @@ class QuestionViewController: UIViewController {
         guard let question = question else {
             return
         }
+        
         questionLabel.text = question.text
         answerOneButton.setTitle(question.answers[0].text, for: .normal)
         answerTwoButton.setTitle(question.answers[1].text, for: .normal)
         answerThreeButton.setTitle(question.answers[2].text, for: .normal)
         answerFourButton.setTitle(question.answers[3].text, for: .normal)
         
+        // One way to assign progress: if-else with optional chaining
+//        if let progress = state?.currentProgress {
+//            questionProgressView.progress = progress
+//        } else {
+//            questionProgressView.progress = 0.0
+//        }
+        
+        // Another way to assign progress: guard with optional chaining
+//        guard let progress = state?.currentProgress else {
+//            questionProgressView.progress = 0.0
+//            return
+//        }
+//        questionProgressView.progress = progress
+        
+        // Preferred way to assign progress: optional chaining with nil coalescing
         questionProgressView.progress = state?.currentProgress ?? 0.0
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -57,32 +73,41 @@ class QuestionViewController: UIViewController {
             return
         }
         resultsViewController.state = state
-        
     }
+    
     func navigateToNextScreen() {
         state?.incrementQuestion()
+        print("4")
         guard let state = state else {
+            print("5")
             return
         }
+        print("6")
         // Instanciar
+
         if state.hasNextQuestion {
+
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             guard let questionViewController = storyboard.instantiateViewController(identifier: "QuestionViewController") as? QuestionViewController else {
                 return
             }
             // Inyection
             questionViewController.state = state
+            
             // Presentacion
             navigationController?.pushViewController(questionViewController, animated: true)
         } else {
             performSegue(withIdentifier: "PresentQuizResults", sender: nil)
+            
         }
     }
     
     @IBAction func didTapFirestAnswer(_ sender: UIButton) {
         
         state?.chooseAnswer(at: 0)
+        print("2")
         navigateToNextScreen()
+        print("3")
     }
     @IBAction func didTapSecondAnswer(_ sender: UIButton) {
         

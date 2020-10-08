@@ -24,6 +24,8 @@ class QuestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //navigationItem.backBarButtonItem = true
         question = state?.nextQuestion
         updateUI()
         
@@ -47,6 +49,8 @@ class QuestionViewController: UIViewController {
         answerTwoButton.setTitle(question.answers[1].text, for: .normal)
         answerThreeButton.setTitle(question.answers[2].text, for: .normal)
         answerFourButton.setTitle(question.answers[3].text, for: .normal)
+        
+        questionProgressView.progress = state?.currentProgress ?? 0.0
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //        if let nextQuestion = state?.nextQuestion
@@ -57,12 +61,14 @@ class QuestionViewController: UIViewController {
         //            return
         //        }
         //        questionViewController.question = nextQuestion
+        
     }
     func navigateToNextScreen() {
-        
+        state?.incrementQuestion()
         guard let state = state else {
             return
         }
+        // Instanciar
         if state.hasNextQuestion {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             guard let questionViewController = storyboard.instantiateViewController(identifier: "QuestionViewController") as? QuestionViewController else {
@@ -73,26 +79,28 @@ class QuestionViewController: UIViewController {
             // Presentacion
             navigationController?.pushViewController(questionViewController, animated: true)
         } else {
-            performSegue(withIdentifier: " PresentQuizResults", sender: nil)
+            performSegue(withIdentifier: "PresentQuizResults", sender: nil)
         }
     }
     
     @IBAction func didTapFirestAnswer(_ sender: UIButton) {
-        state?.incrementQuestion()
+        
+        state?.chooseAnswer(at: 0)
         navigateToNextScreen()
     }
     @IBAction func didTapSecondAnswer(_ sender: UIButton) {
-        state?.incrementQuestion()
+        
+        state?.chooseAnswer(at: 1)
         navigateToNextScreen()
     }
     @IBAction func didTapThirdAnswer(_ sender: UIButton) {
-        state?.incrementQuestion()
+        
+        state?.chooseAnswer(at: 2)
         navigateToNextScreen()
     }
     @IBAction func didTapFourthAnswer(_ sender: UIButton) {
-        state?.incrementQuestion()
+        
+        state?.chooseAnswer(at: 3)
         navigateToNextScreen()
     }
-    
-    
 }

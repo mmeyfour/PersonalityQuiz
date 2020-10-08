@@ -114,32 +114,28 @@
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
                                         <state key="normal" title="Swimming"/>
                                         <connections>
-                                            <action selector="didTapFirestAnswer:" destination="Qak-kZ-0fe" eventType="touchUpInside" id="wIl-vE-NaS"/>
-                                            <action selector="didTappedFirstButton:" destination="Qak-kZ-0fe" eventType="touchUpInside" id="6q1-Yo-6ca"/>
+                                            <action selector="didTapFirestAnswer:" destination="Qak-kZ-0fe" eventType="touchUpInside" id="lsI-Qb-hS3"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ie-93-MHB">
                                         <rect key="frame" x="0.0" y="30" width="382" height="30"/>
                                         <state key="normal" title="Sleeping"/>
                                         <connections>
-                                            <action selector="didTapSecondAnswer:" destination="Qak-kZ-0fe" eventType="touchUpInside" id="1Q2-VQ-jfq"/>
-                                            <action selector="didTappedSecondButton:" destination="Qak-kZ-0fe" eventType="touchUpInside" id="acG-bq-Spk"/>
+                                            <action selector="didTapSecondAnswer:" destination="Qak-kZ-0fe" eventType="touchUpInside" id="aBS-k2-hBk"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjf-37-okN">
                                         <rect key="frame" x="0.0" y="60" width="382" height="30"/>
                                         <state key="normal" title="Cudding"/>
                                         <connections>
-                                            <action selector="didTapThirdAnswer:" destination="Qak-kZ-0fe" eventType="touchUpInside" id="eay-Tc-azk"/>
-                                            <action selector="didTappedThirdButton:" destination="Qak-kZ-0fe" eventType="touchUpInside" id="Et3-aP-5jE"/>
+                                            <action selector="didTapThirdAnswer:" destination="Qak-kZ-0fe" eventType="touchUpInside" id="xfJ-b9-fcS"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4E-8k-PqC">
                                         <rect key="frame" x="0.0" y="90" width="382" height="30"/>
                                         <state key="normal" title="Eating"/>
                                         <connections>
-                                            <action selector="didTapFourthAnswer:" destination="Qak-kZ-0fe" eventType="touchUpInside" id="JYA-rh-2EP"/>
-                                            <action selector="didTappedFourthButton:" destination="Qak-kZ-0fe" eventType="touchUpInside" id="rKt-o6-FnL"/>
+                                            <action selector="didTapFourthAnswer:" destination="Qak-kZ-0fe" eventType="touchUpInside" id="3CN-hJ-vHy"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -217,9 +213,20 @@
                             <constraint firstItem="PWr-FT-uGj" firstAttribute="trailing" secondItem="a8y-uX-DtO" secondAttribute="trailing" id="qDO-nt-ECh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Quiz results" id="oEc-Xn-8a8"/>
+                    <navigationItem key="navigationItem" title="Quiz results" id="oEc-Xn-8a8">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="TVb-t1-O2v">
+                            <connections>
+                                <segue destination="JHC-cF-EPf" kind="unwind" unwindAction="unwindToQuizIntroductionWithSegues:" id="EER-KR-jKv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="subtitleLabel" destination="p9T-m4-ciZ" id="v9f-2D-h70"/>
+                        <outlet property="titleLabel" destination="kK9-IF-y6g" id="0Md-eB-UJz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gY4-kH-3MU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="JHC-cF-EPf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1852" y="80"/>
         </scene>

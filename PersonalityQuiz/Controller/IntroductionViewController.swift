@@ -17,7 +17,11 @@ class IntroductionViewController: UIViewController {
         guard let questionViewController = segue.destination as? QuestionViewController else {
             return
         }
+        state.resetAnswers()
         questionViewController.state = state
+    }
+    @IBAction func unwindToQuizIntroduction (segues: UIStoryboardSegue) {
+        
     }
 
 }

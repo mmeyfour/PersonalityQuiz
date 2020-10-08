@@ -17,11 +17,26 @@ struct Answer {
     let type: Animal
 }
 
-enum Animal {
-    case dog
-    case cat
-    case rabbit
-    case turtle
+enum Animal: String {
+    case dog = "🐶"
+    case cat = "🐱"
+    case rabbit = "🐰"
+    case turtle = "🐢"
+}
+extension Animal {
+    var subtitle : String {
+        switch self {
+            case .dog:
+                return "piratilla"
+            case .cat:
+                return "piratilla"
+            case .turtle:
+                return "piratilla"
+            case .rabbit:
+                return "piratilla"
+        }
+    }
+    
 }
 
 struct State {
@@ -55,7 +70,7 @@ struct State {
             ]
         )
     ]
-    let chosenAnswers: [Answer] = []
+    private var chosenAnswers: [Answer] = []
 }
 
 extension State {
@@ -71,4 +86,47 @@ extension State {
     var hasNextQuestion: Bool {
         return currentQuestionIndex < questions.count
     }
+    mutating func chooseAnswer(at index: Int){
+        chosenAnswers.append(questions[currentQuestionIndex].answers[index])
+    }
+    mutating func add(answer: Answer){
+        chosenAnswers.append(answer)
+    }
+    var winningAnimal: Animal? {
+        var quizCount: [Animal: Int] = [:]
+        
+        for answer in chosenAnswers {
+            let animal = answer.type
+            let currentCount = quizCount[animal]
+            if let currentCount = currentCount {
+                quizCount[animal] = currentCount + 1
+            } else {
+                quizCount[animal] = 1
+            }
+        }
+        
+        guard var winningAnimal = quizCount.keys.first else {
+                return nil
+            }
+        
+        for (newAnimal, newValue) in quizCount {
+            guard let referenceValue = quizCount[winningAnimal] else {
+                continue
+            }
+            if newValue > referenceValue {
+                winningAnimal = newAnimal
+            }
+        }
+        
+        return winningAnimal
+    }
+    mutating func resetAnswers(){
+        chosenAnswers = []
+    }
+    
+    mutating func progress() -> Float {
+        return Float(currentQuestionIndex) / Float(questions.count)
+    }
+    
+
 }

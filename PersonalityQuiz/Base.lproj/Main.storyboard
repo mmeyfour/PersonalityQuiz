@@ -27,7 +27,7 @@
         <!--Begin Quiz-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PersonalityQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="IntroductionViewController" customModule="PersonalityQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -188,7 +188,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You like friends and loyal !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9T-m4-ciZ">
-                                <rect key="frame" x="87" y="508.5" width="240" height="23"/>
+                                <rect key="frame" x="16" y="508.5" width="382" height="23"/>
                                 <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -205,8 +205,9 @@
                             <constraint firstItem="kK9-IF-y6g" firstAttribute="centerY" secondItem="PWr-FT-uGj" secondAttribute="centerY" id="7Jz-xM-Zgt"/>
                             <constraint firstItem="kK9-IF-y6g" firstAttribute="centerX" secondItem="PWr-FT-uGj" secondAttribute="centerX" id="MRm-5X-Ml7"/>
                             <constraint firstItem="a8y-uX-DtO" firstAttribute="top" secondItem="PWr-FT-uGj" secondAttribute="top" id="ObM-S4-p8R"/>
+                            <constraint firstItem="PWr-FT-uGj" firstAttribute="trailing" secondItem="p9T-m4-ciZ" secondAttribute="trailing" constant="16" id="S5w-U5-mmM"/>
                             <constraint firstItem="p9T-m4-ciZ" firstAttribute="top" secondItem="kK9-IF-y6g" secondAttribute="bottom" constant="16" id="VYM-nG-ALw"/>
-                            <constraint firstItem="p9T-m4-ciZ" firstAttribute="centerX" secondItem="PWr-FT-uGj" secondAttribute="centerX" id="WUa-6i-Nsl"/>
+                            <constraint firstItem="p9T-m4-ciZ" firstAttribute="leading" secondItem="PWr-FT-uGj" secondAttribute="leading" constant="16" id="aHp-JM-irK"/>
                             <constraint firstItem="a8y-uX-DtO" firstAttribute="leading" secondItem="PWr-FT-uGj" secondAttribute="leading" id="iZ4-h7-y5Y"/>
                             <constraint firstItem="PWr-FT-uGj" firstAttribute="trailing" secondItem="a8y-uX-DtO" secondAttribute="trailing" id="qDO-nt-ECh"/>
                         </constraints>

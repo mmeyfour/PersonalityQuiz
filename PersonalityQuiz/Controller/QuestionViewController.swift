@@ -77,12 +77,12 @@ class QuestionViewController: UIViewController {
     
     func navigateToNextScreen() {
         state?.incrementQuestion()
-        print("4")
+        
         guard let state = state else {
-            print("5")
+            
             return
         }
-        print("6")
+        
         // Instanciar
 
         if state.hasNextQuestion {
@@ -105,9 +105,9 @@ class QuestionViewController: UIViewController {
     @IBAction func didTapFirestAnswer(_ sender: UIButton) {
         
         state?.chooseAnswer(at: 0)
-        print("2")
+        
         navigateToNextScreen()
-        print("3")
+        
     }
     @IBAction func didTapSecondAnswer(_ sender: UIButton) {
         

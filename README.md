@@ -1,4 +1,4 @@
 #  Personality Quiz
-are you a Dog, Car, Rabbit or a turtle
+Are you a Dog, Car, Rabbit or a turtle ?
 
-![](https://github.com/mmeyfour/PersonalityQuiz/blob/mvc/PersonalityQuiz.gif)
+![](https://github.com/mmeyfour/PersonalityQuiz/blob/main/PersonalityQuiz.gif)
